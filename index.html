@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="weather__wrapper">
+      <form onsubmit="return false" class="weather__search">
+        <input class="input-search" type="text" placeholder="Enter city name" />
+        <button class="btn-search">
+          <img src="./img/icon-search.svg" alt="Search" />
+        </button>
+      </form>
+      <div class="info-block">
+        <div class="tabs">
+          <div id="tab_now" class="tabs__block block-1">
+            <p class="temperature"></p>
+            <img class="icon-weather" src />
+            <div class="now-botton">
+              <form onsubmit="return false" class="form-favorite">
+                <h2 class="now-location"></h2>
+                <button class="btn-favorite">
+                  <svg
+                    class="icon-favorite"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+                    />
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div id="tab_details" class="tabs__block block-2">
+            <h2 class="details-location"></h2>
+            <ul class="details-list">
+              <li class="list-elem"></li>
+              <li class="list-elem"></li>
+              <li class="list-elem"></li>
+              <li class="list-elem"></li>
+              <li class="list-elem"></li>
+            </ul>
+          </div>
+
+          <div id="tab_forecast" class="tabs__block block-3"></div>
+
+          <div class="tabs__item">
+            <a id="real_tab_now" href="#tab_now" class="tab tab-now">Now</a>
+            <a href="#tab_details" class="tab tab-details">Details</a>
+            <a href="#tab_forecast" class="tab tab-forecast">Forecast</a>
+          </div>
+        </div>
+
+        <div class="weather__locations">
+          <div class="added-locations">
+            <h2>Added location:</h2>
+          </div>
+          <div class="list-locations">
+            <!-- <div class="favorite_elem">
+                        <span class="loc-elem"></span> 
+                        <button class="btn-delete"> <img src="./img/delete-icon.svg" alt="-"> </button>
+             </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
