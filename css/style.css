@@ -225,6 +225,57 @@ h2 {
 .list-elem {
   margin-bottom: 14px;
 }
+/* Forecast */
+.block-3 {
+  margin-left: 18px;
+}
+
+.forecast-location {
+  padding-top: 33px;
+	padding-bottom: 7px;
+  
+}
+
+.forecast__block-forecasts {
+	overflow: auto;
+	height: 277px;
+}
+
+.forecast__block-forecasts::-webkit-scrollbar {
+	width: 0px;
+}
+
+.forecast-block {
+	display: flex;
+	justify-content: space-between;
+	width: 265px;
+	height: 120px;
+	border: 1px solid #000;
+	font-size: 18px;
+	line-height: 110%;
+	padding: 6px 10px 10px;
+	margin-bottom: 10px;
+}
+
+.block-date {
+	margin-bottom: 38px;
+}
+
+.block-right {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.block-time {
+	margin-bottom: 34px;
+}
+
+.icon-weather-forecast {
+  height: 30px;
+  width: 30px;
+
+}
 
 /* location    */
 
