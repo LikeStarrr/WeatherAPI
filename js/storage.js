@@ -1,16 +1,22 @@
-/* storage.saveFavoriteCities(favoriteCities)
-const favoriteCities = storage.getFavoriteCities();
-const currentCity = storage.getCurrentCity(); */
-import { UI } from './view.js';
+const FAVORED_CITIES = 'favored-cities';
+const CURRENT_CITY = 'current-city';
 
-export const storage = {
+export const STORAGE = {
 
     setFavoritesToStorage (cityName) {
-        return localStorage.setItem('favored_cities', JSON.stringify(cityName))
+        return localStorage.setItem(FAVORED_CITIES, JSON.stringify(cityName))
     },
 
     getFavoritesFromStorage () {
-        return JSON.parse(localStorage.getItem('favored_cities'))
+        return JSON.parse(localStorage.getItem(FAVORED_CITIES))
+    },
+
+    setCurrentCityToStorage (currentCity) {
+        return localStorage.setItem(CURRENT_CITY, JSON.stringify(currentCity))
+    },
+
+    getCurrentCityFromStorage () {
+        return JSON.parse(localStorage.getItem(CURRENT_CITY))
     },
 
 }
